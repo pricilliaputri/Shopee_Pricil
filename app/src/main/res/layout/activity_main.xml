@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bg_orange"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg_orange">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/scan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/scan_barcode"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_1"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                app:dividerColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/isi_saldo"
+                app:layout_constraintStart_toEndOf="@id/scan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/isi_saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawablePadding="5sp"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/dompet_spay"
+                android:text="Rp2.719"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/divider_2"
+                app:layout_constraintStart_toEndOf="@id/divider_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:text="Isi saldo"
+                app:layout_constraintEnd_toEndOf="@+id/isi_saldo"
+                app:layout_constraintTop_toBottomOf="@+id/isi_saldo" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_2"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                app:dividerColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/koin"
+                app:layout_constraintStart_toEndOf="@id/isi_saldo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/koin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/koin"
+                android:text="2.600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/divider_3"
+                app:layout_constraintStart_toEndOf="@id/divider_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Koin saya"
+                app:layout_constraintEnd_toEndOf="@+id/koin"
+                app:layout_constraintTop_toBottomOf="@+id/koin" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_3"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                app:dividerColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tf"
+                app:layout_constraintStart_toEndOf="@id/koin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/transfer"
+                android:layout_marginStart="8dp"
+                android:text="Transfer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="Gratis"
+                app:layout_constraintEnd_toEndOf="@+id/tf"
+                app:layout_constraintTop_toBottomOf="@+id/tf" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/item_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gambar_gratis_ongkir"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_item_1"
+        android:layout_width="67dp"
+        android:layout_height="63dp"
+        android:layout_margin="10dp"
+        android:text="Gratis ongkir dan Voucher"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_1"
+        app:layout_constraintStart_toStartOf="@id/item_1"
+        app:layout_constraintTop_toBottomOf="@id/item_1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/item_3"
+        app:layout_constraintStart_toEndOf="@id/item_1"
+        app:layout_constraintTop_toBottomOf="@id/card_view" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pulsa" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_2"
+        android:layout_width="72dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:text="Pulsa, Tagihan, dan Tiket"
+        app:layout_constraintEnd_toEndOf="@id/item_2"
+        app:layout_constraintStart_toStartOf="@id/item_2"
+        app:layout_constraintTop_toBottomOf="@id/item_2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/item_4"
+        app:layout_constraintStart_toEndOf="@id/item_2"
+        app:layout_constraintTop_toBottomOf="@id/card_view" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_shopee_mall"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_3"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Shopee Mall"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_3"
+        app:layout_constraintStart_toStartOf="@id/item_3"
+        app:layout_constraintTop_toBottomOf="@id/item_3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toStartOf="@id/item_4"
+        app:layout_constraintStart_toEndOf="@id/item_3"
+        app:layout_constraintTop_toBottomOf="@id/card_view" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopee_tiket"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_4"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="ShopeePay Sekitarmu"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_4"
+        app:layout_constraintStart_toStartOf="@id/item_4"
+        app:layout_constraintTop_toBottomOf="@id/item_4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_4"
+        app:layout_constraintTop_toBottomOf="@id/card_view" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/barokah" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_5"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Shopee Barokah"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_5"
+        app:layout_constraintStart_toStartOf="@id/item_5"
+        app:layout_constraintTop_toBottomOf="@id/item_5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toStartOf="@id/item_7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_1" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stick_ps"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_6"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Shopee Games"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_6"
+        app:layout_constraintStart_toStartOf="@id/item_6"
+        app:layout_constraintTop_toBottomOf="@id/item_6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toStartOf="@id/item_8"
+        app:layout_constraintStart_toEndOf="@id/item_6"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_1" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopee_food" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_7"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="ShopeeFood"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_7"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@id/item_7"
+        app:layout_constraintTop_toBottomOf="@id/item_7" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toStartOf="@id/item_9"
+        app:layout_constraintStart_toEndOf="@id/item_7"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_1" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lokal"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_8"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Shopee Pilih Lokal"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_8"
+        app:layout_constraintStart_toStartOf="@id/item_8"
+        app:layout_constraintTop_toBottomOf="@id/item_8" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toStartOf="@id/item_10"
+        app:layout_constraintStart_toEndOf="@id/item_8"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_1" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paylater"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_9"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SPayLater"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_9"
+        app:layout_constraintStart_toStartOf="@id/item_9"
+        app:layout_constraintTop_toBottomOf="@id/item_9" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_9"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_1" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/others"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_10"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Lihat Semua"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/item_10"
+        app:layout_constraintStart_toStartOf="@id/item_10"
+        app:layout_constraintTop_toBottomOf="@id/item_10" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/crsl_shopee"
+        app:layout_constraintEnd_toEndOf="@id/tv_item_10"
+        app:layout_constraintStart_toStartOf="@id/tv_item_6"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_6">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
